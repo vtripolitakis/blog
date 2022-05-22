@@ -1,5 +1,6 @@
 ---
 title: "So you want to run fresh React on IE11?"
+description: "Digging ancient sites"
 date: 2021-06-30T11:57:43+03:00
 draft: false
 ---

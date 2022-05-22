@@ -1,5 +1,6 @@
 ---
 title: "Get started with Prisma - Part 0"
+description: "Setup a simple Prisma Project"
 date: 2022-05-14T14:21:00+03:00
 draft: false
 ---

@@ -1,5 +1,6 @@
 ---
 title: "C to Wasm for Lazy People"
+description: "export C functions to WebAssembly for lazy people"
 date: 2021-06-26T21:46:18+03:00
 draft: false
 ---

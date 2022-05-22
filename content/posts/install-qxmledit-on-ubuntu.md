@@ -1,5 +1,6 @@
 ---
 title: "Install QXmlEdit on Ubuntu"
+description: "Setting up QXmlEdit on Ubuntu 20.04"
 date: 2021-12-07T10:51:23+03:00
 draft: false
 ---
