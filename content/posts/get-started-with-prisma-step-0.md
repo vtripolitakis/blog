@@ -1,11 +1,11 @@
 ---
-title: "Get started with Prisma - Part 0"
+title: "Get started with Prisma - Step 0"
 description: "Setup a simple Prisma Project"
 date: 2022-05-14T14:21:00+03:00
 draft: false
 ---
 
-## Part 0 - Setup a simple Prisma Project
+## Step 0 - Setup a simple Prisma Project
 #### 2022-05-14 - Vangelis Tripolitakis (vtripolitakis@_DONTSPAMME_me.com)
 
 ## Introduction
