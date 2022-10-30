@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+    font-size: 2.0rem;
+    margin-bottom:1.0rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-bottom:1.0rem;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(230,230,230);
+    border: 1px solid rgb(180,180,180);
+    padding: 0.1rem;
+}
+
+p {
+    margin: 1.0rem 0;
+    line-height: 1.5rem;
+}
+
+pre {
+    border: 1px solid rgb(200,200,200);
+    margin-bottom: 2.0rem;
+}
+
+ol {
+    list-style-type:decimal
+}

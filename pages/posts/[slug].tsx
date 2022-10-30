@@ -4,6 +4,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import matter from "gray-matter";
 import rehypeHighlight from "rehype-highlight";
+import Header from "../../components/Header";
 
 interface IProps {
   title: string;
@@ -27,8 +28,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
         "utf8"
       );
       const postData = matter(data);
-      const { data:postMetaData } = postData;
-      const {title, description} = postMetaData;
+      const { data: postMetaData } = postData;
+      const { title, description } = postMetaData;
       const content = postData?.content || "empty";
       const mdxSource = await serialize(content, {
         mdxOptions: { rehypePlugins: [rehypeHighlight] },
@@ -81,14 +82,15 @@ const PostPage = (props: IProps) => {
     <div>
       <Head>
         <title>{title}</title>
-        <meta
-          name="description"
-          content={description}
-        />
+        <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <MDXRemote {...data} />
+      <main className="container mx-auto">
+        <Header />
+        <div className="lg:w-3/5 mx-2" >
+          <h2>{title}</h2>
+          <MDXRemote {...data} />
+        </div>
       </main>
     </div>
   );

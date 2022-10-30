@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import matter from "gray-matter";
 import moment from "moment";
+import Header from "../components/Header";
 
 export const getStaticProps: GetStaticProps = async () => {
   const path = require("path");
@@ -10,13 +11,17 @@ export const getStaticProps: GetStaticProps = async () => {
   const postsDir = path.resolve(process.cwd(), "content");
   try {
     const files = await fs.readdirSync(postsDir);
-    const articlesList: { slug: string, title: string; date: string }[] = [];
+    const articlesList: { slug: string; title: string; date: string }[] = [];
     files.forEach(function (fileName: string) {
       const fileData = fs.readFileSync(path.join(postsDir, fileName), "utf8");
       const postData = matter(fileData);
       const { data: postMetaData } = postData;
       const { title, date } = postMetaData;
-      articlesList.push({ slug: fileName.replace(/\.[^/.]+$/, ""), title, date: JSON.stringify(date) });
+      articlesList.push({
+        slug: fileName.replace(/\.[^/.]+$/, ""),
+        title,
+        date: JSON.stringify(date),
+      });
     });
     return {
       props: {
@@ -43,19 +48,22 @@ export default function Home({ articlesList }: any) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <ul>
-          {articlesList.map((article: any) => {
-            return (
-              <li key={article.title}>
-                <Link href={`/posts/${article.slug}`}>
-                <h2>{article.title}</h2>
-                </Link>
-                {moment(JSON.parse(article.date)).format("YYYY-MM-DD")}
-              </li>
-            );
-          })}
-        </ul>
+      <main className="container mx-auto">
+        <Header />
+        <div className="lg:w-1/2 mx-2 lg:mx-auto">
+          <ul>
+            {articlesList.map((article: any) => {
+              return (
+                <li key={article.title} className="mb-6">
+                  <Link href={`/posts/${article.slug}`}>
+                    <p className="text-2xl font-semibold hover:underline hover:text-orange-400">{article.title}</p>
+                  </Link>
+                  <span className="text-slate-500">{moment(JSON.parse(article.date)).format("YYYY-MM-DD")}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </main>
     </div>
   );

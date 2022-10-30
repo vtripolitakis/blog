@@ -11,7 +11,7 @@ draft: false
 0. Install `react-app-polyfill`
 1. On your entry point (let's say `src/index.jsx`) insert on the top `import 'react-app-polyfill/ie11';` (ie9 for even older browser support but that's out of the scope of this guide)
 2. Add the following on your `package.json` 
-```
+```json
 "browserslist": {
     "production": [
       ">0.2%",
@@ -28,7 +28,7 @@ draft: false
   }
 ```
 3. Tweak your `.babelrc` to have at least the following:
-```
+```json
 {
   presets: [
     [
@@ -48,7 +48,7 @@ draft: false
 }
 ```
 4. Tweak your `webpack.config.js` `module` attribute as follows:
-```
+```json
 module: {
     rules: [
       {
