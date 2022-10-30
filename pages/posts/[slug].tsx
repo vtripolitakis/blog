@@ -5,6 +5,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import matter from "gray-matter";
 import rehypeHighlight from "rehype-highlight";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 interface IProps {
   title: string;
@@ -91,6 +92,7 @@ const PostPage = (props: IProps) => {
           <h2>{title}</h2>
           <MDXRemote {...data} />
         </div>
+        <Footer />
       </main>
     </div>
   );

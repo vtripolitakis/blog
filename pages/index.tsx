@@ -4,6 +4,7 @@ import Link from "next/link";
 import matter from "gray-matter";
 import moment from "moment";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const getStaticProps: GetStaticProps = async () => {
   const path = require("path");
@@ -64,6 +65,7 @@ export default function Home({ articlesList }: any) {
             })}
           </ul>
         </div>
+        <Footer />
       </main>
     </div>
   );
