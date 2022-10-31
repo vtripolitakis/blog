@@ -5,8 +5,8 @@ date: 2022-05-14T14:21:00+03:00
 draft: false
 ---
 
-## Step 0 - Setup a simple Prisma Project
-#### 2022-05-14 - Vangelis Tripolitakis (vtripolitakis@_DONTSPAMME_me.com)
+#### Step 0 - Setup a simple Prisma Project
+#### 2022-05-14
 
 ## Introduction
 This is the first post of a series of mini (should take a few minutes) tutorials to get you started with Prisma. In this tutorial I set up the Prisma Client and print some attributes of a relation stored on a simple SQLite database (supplied). This tutorial has batteries included (`.env.example` and `db/mydb.sqlite`). You just need to have a recent node.js installed.

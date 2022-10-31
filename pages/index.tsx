@@ -21,12 +21,17 @@ export const getStaticProps: GetStaticProps = async () => {
       articlesList.push({
         slug: fileName.replace(/\.[^/.]+$/, ""),
         title,
-        date: JSON.stringify(date),
+        date,
       });
     });
+    const sortedArticlesList = articlesList.sort((a, b)=>Date.parse(a.date) - Date.parse(b.date));
     return {
       props: {
-        articlesList,
+        articlesList: sortedArticlesList.map(i=>{return {
+          slug: i.slug,
+          title: i.title,
+          date: JSON.stringify(i.date)
+        }}).reverse()
       }, // will be passed to the page component as props
     };
   } catch {

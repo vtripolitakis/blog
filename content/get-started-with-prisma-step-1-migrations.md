@@ -5,10 +5,9 @@ date: 2022-05-22T20:42:00+03:00
 draft: false
 ---
 
-# Step 1 - Migrations
-## Author: Vangelis Tripolitakis
+#### Step 1 - Migrations
+#### 2022-05-22
 
-## https://v.trp.gr - vtripolitakis@me.com - 22/05/2022
 
 ## What's this?
 Today we'll cover migrations in Prisma. We'll create a couple of models, add some data and

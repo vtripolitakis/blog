@@ -5,8 +5,8 @@ date: 2021-12-07T10:51:23+03:00
 draft: false
 ---
 
-## Setting up QXmlEdit on Ubuntu 20.04 ...
-#### 2021-12-07 - Vangelis Tripolitakis (vtripolitakis@_DONTSPAMME_me.com)
+#### Setting up QXmlEdit on Ubuntu 20.04 ...
+#### 2021-12-07
 
 0. Set up your C++ compiler 
 1. Download the latest and greatest source tarball

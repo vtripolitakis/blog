@@ -4,8 +4,8 @@ description: "export C functions to WebAssembly for lazy people"
 date: 2021-06-26T21:46:18+03:00
 draft: false
 ---
-## export C functions to WebAssembly for lazy people
-#### 2021-06-24 - Vangelis Tripolitakis (vtripolitakis@_DONTSPAMME_me.com)
+#### export C functions to WebAssembly for lazy people
+#### 2021-06-24
 
 0. I suspect you've already have Emscripten (https://emscripten.org/) installed.
 1. Make sure, you've included the proper paths, so you can issue `emcc` from command line. If not sure, visit Emscripten's documentation and see how it's done. (tip: `source emsdk_env.sh` on your Emscripten installation folder - I assume you use bash).
