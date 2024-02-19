@@ -18,14 +18,14 @@ I've created an example Docker compose file and a sample Caddyfile.
 - A `docker-compose.yaml` file
 
 ## Caddyfile
-This is a simple Caddyfile setting up an HTTP host on port 8085 with the following configurations:
+This is a simple Caddyfile setting up an HTTP host on port 8085 with the following configuration:
 
 - `/db` proxying couchdb running on localhost, port 5984
 - `/api` proxying an API running on localhost, port 5050
 -  proxying a frontend running on localhost, port 3000
 
 As you may see `host.docker.internal` is a trick to get the IP of the host running the Docker container.
-Nevertheless, it needs on more step, shown on the docker-compose.yaml file below.
+Nevertheless, it needs on more step, shown on the `docker-compose.yaml` file below.
 
 ```sh
 http://localhost:8085 {
@@ -44,7 +44,7 @@ http://localhost:8085 {
 ```
 
 ## docker-compose.yaml
-These lines instruct the Docker to pass the host IP to the Caddy container, resolving as host.docker.internal:
+These lines instruct the Docker to pass the host IP to the Caddy container, resolving as `host.docker.internal`:
 ```sh
 extra_hosts:
   - host.docker.internal:host-gateway
