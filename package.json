@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.2.2",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.6.0",
     "moment": "^2.29.4",
