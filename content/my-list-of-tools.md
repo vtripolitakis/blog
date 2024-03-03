@@ -9,47 +9,47 @@ draft: false
 #### 2023-03-03
 
 ## Introduction
-I setup recently a new laptop at my office running Ubuntu 22.04 LTS (24.04 not available yet as it's still March :-) ).
+I setup recently a new laptop at my office running Ubuntu 22.04 LTS (24.04 not available yet as it's still March 😊 ).
 
 ## What's included?
-- My personal + opinionated + mostly incomplete list
+My personal + opinionated + mostly incomplete list
 
 
 ## Basic tools
-- htop
-- ncdu
-- git
-- azure cli tools
+- ➡ htop
+- ➡ ncdu
+- ➡ git
+- ➡ azure cli tools
 
 ## Shell
-- zsh
-- Oh my ZSH
+- ➡ zsh
+- ➡ Oh my ZSH
 
 ## IDE / Productivity
-- VS Code
-- Notion
-- Teams for Linux
+- ➡ VS Code
+- ➡ Notion
+- ➡ Teams for Linux
 
 ## Kubernetes
-- K3S
-- kubectl
-- helm
+- ➡ K3S
+- ➡ kubectl
+- ➡ helm
 
 ## Docker
-- docker
-- lazydocker
+- ➡ docker
+- ➡ lazydocker
 
 ## Python
-- pyenv
-- uv
+- ➡ pyenv
+- ➡ uv
 
 ## Node
-- nvm
+- ➡ nvm
 
 ## Go
-- golang
+- ➡ golang
 
 
-have fun!
+have fun! ❤
 
 
