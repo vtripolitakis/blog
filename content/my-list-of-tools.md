@@ -28,11 +28,13 @@ My personal + opinionated + mostly incomplete list
 ## IDE / Productivity
 - ➡ VS Code
 - ➡ Notion
+- ➡ Slack
 - ➡ Teams for Linux
 
 ## Kubernetes
 - ➡ K3S
 - ➡ kubectl
+- ➡ k9s
 - ➡ helm
 
 ## Docker
