@@ -36,6 +36,7 @@ My personal + opinionated + mostly incomplete list
 - ➡ kubectl
 - ➡ k9s
 - ➡ helm
+- ➡ netshoot
 
 ## Docker
 - ➡ docker
