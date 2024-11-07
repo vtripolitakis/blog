@@ -6,7 +6,8 @@ draft: false
 ---
 
 ####
-#### 2023-03-03
+#### 2024-03-03
+#### Last update 2024-11-07
 
 ## Introduction
 I setup recently a new laptop at my office running Ubuntu 22.04 LTS (24.04 not available yet as it's still March 😊 ).
@@ -32,7 +33,7 @@ My personal + opinionated + mostly incomplete list
 - ➡ Teams for Linux
 
 ## Kubernetes
-- ➡ K3S
+- ➡ kind
 - ➡ kubectl
 - ➡ k9s
 - ➡ helm
