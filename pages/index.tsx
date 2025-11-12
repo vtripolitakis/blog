@@ -57,14 +57,25 @@ export default function Home({ articlesList }: any) {
       <main className="container mx-auto">
         <Header />
         <div className="lg:w-1/2 mx-2 lg:mx-auto">
-          <ul>
+          <ul className="space-y-4">
             {articlesList.map((article: any) => {
               return (
-                <li key={article.title} className="mb-6">
+                <li key={article.title} className="group">
                   <Link href={`/posts/${article.slug}`}>
-                    <p className="text-2xl font-semibold hover:underline hover:text-orange-400">{article.title}</p>
+                    <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-white/40">
+                      <div className="flex items-start justify-between gap-4">
+                        <p className="text-2xl font-semibold group-hover:text-orange-500 transition-colors duration-200 flex-1">
+                          {article.title}
+                        </p>
+                        <div className="flex items-center gap-2 text-slate-600 flex-shrink-0">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          <span className="text-sm font-medium">{moment(JSON.parse(article.date)).format("DD/MM/YYYY")}</span>
+                        </div>
+                      </div>
+                    </div>
                   </Link>
-                  <span className="text-slate-500">{moment(JSON.parse(article.date)).format("YYYY-MM-DD")}</span>
                 </li>
               );
             })}
