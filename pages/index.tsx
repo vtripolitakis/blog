@@ -54,24 +54,27 @@ export default function Home({ articlesList }: any) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container mx-auto">
+      <main className="container mx-auto px-4">
         <Header />
-        <div className="lg:w-1/2 mx-2 lg:mx-auto">
-          <ul className="space-y-4">
+        <div className="max-w-6xl mx-auto">
+          <ul className="space-y-5 list-none p-0 m-0">
             {articlesList.map((article: any) => {
               return (
-                <li key={article.title} className="group">
+                <li key={article.title} className="group list-none">
                   <Link href={`/posts/${article.slug}`}>
-                    <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-white/40">
-                      <div className="flex items-start justify-between gap-4">
-                        <p className="text-2xl font-semibold group-hover:text-orange-500 transition-colors duration-200 flex-1">
-                          {article.title}
-                        </p>
-                        <div className="flex items-center gap-2 text-slate-600 flex-shrink-0">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 border border-white/50 relative overflow-hidden">
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                        <div className="flex-1">
+                          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight m-0">
+                            {article.title}
+                          </h3>
+                        </div>
+                        <div className="flex items-center gap-2 text-blue-700 flex-shrink-0">
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
-                          <span className="text-sm font-medium">{moment(JSON.parse(article.date)).format("DD/MM/YYYY")}</span>
+                          <span className="text-base font-semibold">{moment(JSON.parse(article.date)).format("DD/MM/YYYY")}</span>
                         </div>
                       </div>
                     </div>

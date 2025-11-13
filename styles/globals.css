@@ -12,45 +12,196 @@
     }
 }
 
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 body {
     background: linear-gradient(
-        -45deg,
-        #f9dcd4,
-        #f8d0df,
-        #d4eaf5,
-        #d4f5ed
+        135deg,
+        #3b82f6 0%,
+        #2563eb 25%,
+        #60a5fa 50%,
+        #06b6d4 75%,
+        #0ea5e9 100%
     );
     background-size: 400% 400%;
     animation: gradient-shift 15s ease infinite;
     min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 h2 {
-    font-size: 2.0rem;
-    margin-bottom:1.0rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    color: #1e40af;
 }
 
 h4 {
-    font-size: 1.2rem;
-    margin-bottom:1.0rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #1e40af;
 }
 
 code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(230,230,230);
-    padding: 0.1rem;
-}
-
-p {
-    margin: 1.0rem 0;
-    line-height: 1.5rem;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    color: #764ba2;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+    border: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 pre {
-    border: 1px solid rgb(200,200,200);
-    margin-bottom: 2.0rem;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    overflow-x: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+pre code {
+    background: none;
+    border: none;
+    color: #2d3748;
+    padding: 0;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+p {
+    margin: 1.25rem 0;
+    line-height: 1.75;
+    font-size: 1.0625rem;
+    color: #1e293b;
+}
+
+ul, ol {
+    margin: 1.25rem 0;
+    padding-left: 1.5rem;
+    line-height: 1.75;
 }
 
 ol {
-    list-style-type:decimal
+    list-style-type: decimal;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+li {
+    margin: 0.5rem 0;
+    color: #1e293b;
+    font-size: 1.0625rem;
+}
+
+blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #4a5568;
+    background: rgba(102, 126, 234, 0.05);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+/* Syntax highlighting improvements */
+.hljs {
+    background: transparent !important;
+}
+
+.hljs-comment {
+    color: #718096;
+    font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-title {
+    color: #9333ea;
+    font-weight: 600;
+}
+
+.hljs-string,
+.hljs-attr {
+    color: #059669;
+}
+
+.hljs-number {
+    color: #dc2626;
+}
+
+.hljs-function {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.hljs-variable,
+.hljs-built_in {
+    color: #0891b2;
+}
+
+.hljs-literal {
+    color: #dc2626;
 }

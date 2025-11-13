@@ -88,10 +88,14 @@ const PostPage = (props: IProps) => {
       </Head>
       <main className="container mx-auto">
         <Header />
-        <div className="mx-4" >
-          <h2>{title}</h2>
-          <MDXRemote {...data} />
-        </div>
+        <article className="max-w-6xl mx-auto px-4 mb-16">
+          <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-12 border border-white/40">
+            <h2 className="mb-8">{title}</h2>
+            <div className="prose prose-lg max-w-none">
+              <MDXRemote {...data} />
+            </div>
+          </div>
+        </article>
         <Footer />
       </main>
     </div>
